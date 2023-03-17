@@ -6,10 +6,10 @@
  * write -  system call that is used to write data out of a buffer
  * Return: Always 1 (Success)
  */
-int main()
+int main(void)
 {
-	char quote[] = "and that piece of art is useful\" -Dora Korpar, 2015-10-19\n";
-	write(2, quote, strnlen(quote,sizeof(quote)));
+	char quote[] = "and that piece of art is useful\"\n"
+	"- Dora Korpar, 2015-10-19\n";
+	write(2, quote, strlen(quote, sizeof(quote)));
 	return (1);
 }
-
