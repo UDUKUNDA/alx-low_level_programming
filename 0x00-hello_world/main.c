@@ -7,6 +7,7 @@
  */
 int main(void)
 {
+	printf("Hey what's going on");
 	return (0);
 
 }
