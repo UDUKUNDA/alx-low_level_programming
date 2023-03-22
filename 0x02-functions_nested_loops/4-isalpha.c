@@ -1,3 +1,4 @@
+#include "main.h"
 #include <ctype.h>
 /**
  * _isalpha - checks if an char is alphabet
