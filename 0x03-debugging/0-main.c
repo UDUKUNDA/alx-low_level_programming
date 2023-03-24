@@ -2,6 +2,7 @@
 
 /**
 * main - tests function that prints correct ans
+*
 * Return: 0
 */
 
