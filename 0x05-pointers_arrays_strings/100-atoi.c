@@ -26,9 +26,9 @@ int _atoi(char *s)
 		x = (x * 10) + (s[c] - '0');
 	c++;
 	}
-	if (z  == 1)
+	if (z == 1)
 	{
-		 break;
+		break;
 	}
 	c++;
 	}
