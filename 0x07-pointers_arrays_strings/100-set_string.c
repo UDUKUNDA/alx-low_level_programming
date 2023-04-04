@@ -2,12 +2,11 @@
 /**
  * set_string - will change the string
  * @s: containe the address of a poointer
- * @t: a pointer to a second str
+ * @to: a pointer to a second str
  *
  * Return: nothing
  */
 void set_string(char **s, char *to)
 {
-	 *s = to;
+	*s = to;
 }
-	
