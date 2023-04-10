@@ -16,14 +16,21 @@ int main(int argc, char **argv)
 	if (argc != 2)
 	{
 		printf("Error\n");
-                return (1);
+		return (1);
 	}
 		x = atoi(argv[1]);
+		if (x > 0)
+		{
 		for (i = 0; i < 5; i++)
 		{
 			y += x / cns[i];
 			x %= cns[i];
 		}
 		printf("%d\n", y);
-	return (0);
+		}
+		else
+		{
+			printf("0\n");
+		}
+		return (0);
 }
