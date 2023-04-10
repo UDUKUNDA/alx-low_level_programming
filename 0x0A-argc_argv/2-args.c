@@ -9,13 +9,13 @@
  */
 int main(int argc, char **argv)
 {
-	int n;
+	int x;
 
 	if (argc > 1)
 	{
-		for (n = 0; n < argc; n++)
+		for (x = 0; x < argc; x++)
 		{
-			printf("%s\n", argv[n]);
+			printf("%s\n", argv[x]);
 		}
 	}
 	return (0);
