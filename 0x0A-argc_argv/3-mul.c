@@ -9,7 +9,8 @@
 int main(int argc, char **argv)
 {
 	int n, sum = 1;
-	if (argc > 1)
+
+	if (argc > 2)
 	{
 		for (n = 1; n < argc; n++)
 		{
