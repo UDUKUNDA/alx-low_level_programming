@@ -13,8 +13,11 @@ int main(int argc, char **argv)
 	int i;
 	int cns[5] = {25, 10, 5, 2, 1};
 
-	if (argc == 2)
+	if (argc != 2)
 	{
+		printf("Error\n");
+                return (1);
+	}
 		x = atoi(argv[1]);
 		for (i = 0; i < 5; i++)
 		{
@@ -22,11 +25,5 @@ int main(int argc, char **argv)
 			x %= cns[i];
 		}
 		printf("%d\n", y);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
 	return (0);
 }
