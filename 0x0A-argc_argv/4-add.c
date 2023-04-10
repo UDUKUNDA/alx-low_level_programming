@@ -11,9 +11,9 @@
  */
 int main(int argc, char **argv)
 {
-	int n, sum = 0;
+	int  n, sum = 0;
 
-	if (argc > 1)
+	if (argc > 0)
 	{
 		for (n = 1; n < argc; n++)
 		{
