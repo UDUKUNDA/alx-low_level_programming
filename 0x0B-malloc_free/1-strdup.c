@@ -1,0 +1,27 @@
+#include "main.h"
+#include <stdlib.h>
+#include <string.h>
+/**
+ * _strdup - contain a copy of a an array of string
+ * @str: the string
+ * Return: a ponter to a character
+ */
+char *_strdup(char *str)
+{
+	char *a;
+	int len;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	len = strlen(str);
+	a = malloc(sizeof(char) * len);
+	if (a == NULL)
+	{
+		return (NULL);
+	}
+	a = strdup(str);
+	return (a);
+	free(a);
+}
