@@ -33,7 +33,7 @@ char *argstostr(int ac, char **av)
 		strcpy(&str[x], av[i]);
 		x += strlen(av[i]);
 		str[x] = '\n';
-		x++
+		x++;
 	}
 	return (str);
 	free(str);
