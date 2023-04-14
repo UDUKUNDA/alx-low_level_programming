@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
+void printy(int a);
 
 /**
  * main - multiplies the argument
@@ -11,11 +12,8 @@
  */
 int main(int argc, char **argv)
 {
-	int num1 = 0, i;
-	int num2 = 0;
-	int y;
+	int num1 = 0, i, num2 = 0, y;
 	char *x;
-	char res[20];
 
 	if (argc != 3)
 	{
@@ -34,31 +32,40 @@ int main(int argc, char **argv)
 		{
 		if (!isdigit(*x))
 		{
-	       	_putchar('E');
-                _putchar('r');
-                _putchar('r');
-                _putchar('o');
-                _putchar('r');
-                _putchar('\n');
-                exit(98);
+			_putchar('E');
+			_putchar('r');
+			_putchar('r');
+			_putchar('o');
+			_putchar('r');
+			_putchar('\n');
+			exit(98);
 		}
 		x++;
 		}
 		if (i == 1)
-		{
 			num1 = atoi(argv[i]);
-		}
 		else
-		{
 			num2 = atoi(argv[i]);
-		}
 	}
 	y = num1 * num2;
-	sprintf(res, "%d", y);
-	for (i = 0; res[i] != '\0'; i++)
+	printy(y);
+	return (0);
+}
+/**
+ * printy - prints result;
+ * @a: a value
+ *
+ * Return: nothing
+ */
+void printy(int a)
+{
+	char b[20];
+	int i;
+
+	sprintf(b, "%d", a);
+	for (i = 0; b[i] != '\0'; i++)
 	{
-		_putchar(res[i]);
+		_putchar(b[i]);
 	}
 	_putchar('\n');
-	return (0);
 }
