@@ -10,15 +10,17 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1 = strlen(s2);
+	unsigned int len;
 	char *str;
-	unsigned int len = strlen(s1);
+	unsigned int len1;
 
 	if (s1 == NULL || s2 == NULL)
 	{
 		s1 = " ";
 		s2 = " ";
 	}
+	len = strlen(s1);
+	len1 = strlen(s2);
 	if (len1 >= n)
 	{
 		len1 = n;
