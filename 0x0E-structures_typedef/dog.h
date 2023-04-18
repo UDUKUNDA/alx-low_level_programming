@@ -8,7 +8,7 @@
  *
  * Description: I don't have any longer description
  */
-struct dog
+typedef struct dog_t
 {
 	char *name;
 	char *owner;
