@@ -1,1 +1,1 @@
-Introduction to c  programming
+This is an introduction to pointer function
