@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 	}
 	int nb = atoi(argv[1]);
 
-	if (num_bytes < 0)
+	if (nb < 0)
 	{
 		printf("Error\n");
 		return (2);
@@ -38,7 +38,7 @@ void print_opcodes(char *s, int nb)
 
 	for (i = 0; i < nb; i++)
 	{
-		printf("%02hhx ", start[i]);
+		printf("%02hhx ", s[i]);
 	}
 	printf("\n");
 }
