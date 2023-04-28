@@ -8,6 +8,8 @@
  */
 void free_list(list_t *head)
 {
+	if (head != NULL)
+	{
 	list_t *cNode = head;
 	list_t *trav;
 
@@ -15,6 +17,8 @@ void free_list(list_t *head)
 	{
 		trav = cNode->next;
 		free(cNode->str);
+		free(cNode);
 		cNode = trav;
+	}
 	}
 }
