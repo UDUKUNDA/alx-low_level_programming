@@ -17,4 +17,5 @@ void free_list(list_t *head)
 		free(cNode);
 		cNode = trav;
 	}
+	head = NULL;
 }
