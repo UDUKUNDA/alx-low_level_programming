@@ -14,6 +14,7 @@ void free_list(list_t *head)
 	while (cNode != NULL)
 	{
 		trav = cNode->next;
+		free(cNode->str);
 		free(cNode);
 		cNode = trav;
 	}
