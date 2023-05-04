@@ -27,21 +27,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = Nnode;
 	}
 	temp = *head;
-	while (temp != NULL)
+	for (i = 0; i < idx - 1; i++)
 	{
-		if (i == idx - 1)
-		{
-			x = 1;
-			Nnode->next = temp->next;
-			temp->next = Nnode;
-		}
-		else
-		{
 		temp = temp->next;
-		}
-		i++;
 	}
-	if (x == 0)
+	if (temp != NULL)
+	{
+		Nnode->next = temp->next;
+		temp->next = Nnode;
+		x++;
+	}
+	if (x == 1)
 	{
 		return (NULL);
 	}
