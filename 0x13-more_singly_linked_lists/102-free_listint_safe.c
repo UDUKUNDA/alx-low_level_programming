@@ -8,9 +8,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t i = 0;
-	listint_t *front = *h;
-	listint_t *behind = *h;
-	listint_t *temp;
+	listint_t *front = *h, *behind = *h, *temp;
 
 	while (front != NULL && front->next != NULL)
 	{
@@ -50,5 +48,3 @@ size_t free_listint_safe(listint_t **h)
 	*h = NULL;
 	return (i);
 }
-
-
