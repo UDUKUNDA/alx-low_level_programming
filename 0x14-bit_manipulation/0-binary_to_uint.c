@@ -13,8 +13,8 @@ unsigned int binary_to_uint(const char *b)
 	int len1 = strlen(b), i;
 	int len2 = len1, po, pd, x = 0;
 	unsigned int sum = 0;
-	
-	if ( b == NULL)
+
+	if (b == NULL)
 	{
 		return (0);
 	}
@@ -43,6 +43,7 @@ unsigned int binary_to_uint(const char *b)
 int power(int len)
 {
 	int prod =  1, i;
+
 	for (i = len - 1; i > 0; i--)
 	{
 		if (i == 0)
