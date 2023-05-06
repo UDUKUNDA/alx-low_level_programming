@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#define SIZE (sizeof(unsigned long int) * 8)
 /**
  * flip_bits - flips the bits and returns thier count
  * @n: the first number
