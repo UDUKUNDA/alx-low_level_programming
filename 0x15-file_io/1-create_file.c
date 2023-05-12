@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <string.h>
+#include <errno.h>
 /**
  * create_file -creates a file
  * @filename: this is the filename
@@ -18,10 +19,17 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (0);
 	}
-	fp = open("filename", O_CREAT | O_TRUNC | O_WRONLY, S_IRUSR | S_IWUSR);
+	fp = open(filename, O_CREAT | O_EXCL | O_WRONLY, S_IRUSR | S_IWUSR);
 	if (fp == -1)
 	{
-		return (-1);
+		if (errno == EEXIST)
+		{
+			fp = open(filename, O_WRONLY, S_IWUSR);
+			if (fp == -1)
+			{
+				return (-1);
+			}
+		}
 	}
 	else
 	{
