@@ -12,7 +12,7 @@
 int main(int argc, char **argv)
 {
 	ssize_t s, t;
-	int fd1, fd2;
+	int file_from, file_to;
 	char a[BUFFSIZE];
 
 	if (argc != 3)
@@ -20,21 +20,21 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Usage:%sfile_from file_to \n", argv[0]);
 		exit(97);
 	}
-	 fd1 = open(argv[1], O_RDONLY);
-	if (fd1 == -1)
+	 file_from = open(argv[1], O_RDWR);
+	if (file_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
 		exit(98);
 	}
-	fd2 = open(argv[2], O_CREAT | O_TRUNC| S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
-	if (fd2 == -1)
+	file_to = creat(argv[2],  0664);
+	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while ((s = read(fd1, a, BUFFSIZE)) > 0)
+	while ((s = read(file_from, a, BUFFSIZE)) > 0)
 	{
-	t = write(fd2, a, s);
+	t = write(file_from, a, s);
 	if (t == -1 || t != s)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -46,14 +46,14 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
 		exit(98);
 	}
-	if (close(fd1) == -1)
+	if (close(file_from) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", file_from);
 		exit(100);
 	}
-	if (close(fd2) == -1)
+	if (close(file_to) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't clöse fd %d", fd2);
+		dprintf(STDERR_FILENO, "Error: can't clöse fd %d", file_to);
 		exit(100);
 	}
 	return (0);
