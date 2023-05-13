@@ -17,10 +17,10 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage:%sfile_from file_to \n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage:file_from file_to\n");
 		exit(97);
 	}
-	 file_from = open(argv[1], O_RDWR);
+	 file_from = open(argv[1], O_RDONLY, 0);
 	if (file_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
