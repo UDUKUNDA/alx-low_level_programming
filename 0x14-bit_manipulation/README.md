@@ -1,1 +1,1 @@
-THis whole project is going to be about bit manipulation
+This is the beginning of bit manipulation prioject

@@ -2,58 +2,58 @@
 #include <math.h>
 #include <string.h>
 #include <stdlib.h>
-int power(int len);
+int powers(int length);
 /**
- * binary_to_uint - converts a binary to ui;
+ * binary_to_uint - converts a binary to an unsigned iteger;
  * @b: a binary number string
- * Return: An integer value
+ * Return: An unsigned integer value
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int len1 = strlen(b), i;
-	int len2 = len1, po, pd, x = 0;
-	unsigned int sum = 0;
+	int length1 = strlen(b), i;
+	int length2 = length1, po, pd, x = 0;
+	unsigned int summation = 0;
 
 	if (b == NULL)
 	{
 		return (0);
 	}
-	for (i = 0; i < len1; i++)
+	for (i = 0; i < length1; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
 		{
 			x++;
 		}
-		po = power(len2);
+		po = powers(length2);
 		pd = b[i] - '0';
-		sum += po * pd;
-		len2--;
+		summation += po * pd;
+		length2--;
 	}
 	if (x != 0)
 	{
 		return (0);
 	}
-	return (sum);
+	return (summation);
 }
 /**
  * power - to give the powers of a binary number
- * @len: passed string length
+ * @length: passed string length
  * Return: a value
  */
-int power(int len)
+int powers(int length)
 {
-	int prod =  1, i;
+	int product =  1, i;
 
-	for (i = len - 1; i > 0; i--)
+	for (i = length - 1; i > 0; i--)
 	{
 		if (i == 0)
 		{
-			prod = 1;
+			product = 1;
 		}
 		else
 		{
-			prod *= 2;
+			product *= 2;
 		}
 	}
-	return (prod);
+	return (product);
 }
