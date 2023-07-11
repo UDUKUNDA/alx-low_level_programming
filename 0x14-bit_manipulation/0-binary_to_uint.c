@@ -36,7 +36,7 @@ unsigned int binary_to_uint(const char *b)
 	return (summation);
 }
 /**
- * power - to give the powers of a binary number
+ * powers - to give the powers of a binary number
  * @length: passed string length
  * Return: a value
  */
