@@ -1,4 +1,4 @@
- #include "main.h"
+#include "main.h"
 /**
  * print_binary - this will give a binary number
  * @n: n will be a parameter
