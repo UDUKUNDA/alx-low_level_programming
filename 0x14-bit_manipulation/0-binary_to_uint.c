@@ -11,7 +11,7 @@ int powers(int length);
 unsigned int binary_to_uint(const char *b)
 {
 	int length1 = strlen(b), i;
-	int length2 = length1, po, pd, x = 0;
+	int length2 = length1, po, pd, y = 0;
 	unsigned int summation = 0;
 
 	if (b == NULL)
@@ -22,14 +22,14 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != '0' && b[i] != '1')
 		{
-			x++;
+			y++;
 		}
 		po = powers(length2);
 		pd = b[i] - '0';
 		summation += po * pd;
 		length2--;
 	}
-	if (x != 0)
+	if (y != 0)
 	{
 		return (0);
 	}
