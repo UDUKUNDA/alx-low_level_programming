@@ -5,10 +5,9 @@
 #include <string.h>
 #include <errno.h>
 /**
- * create_file -creates a file
- * @filename: this is the filename
- * @text_content: these are the content of the file
- *
+ * create_file - this makes a file
+ * @filename: the param 2
+ * @text_content: The param 2
  * Return: a value
  */
 int create_file(const char *filename, char *text_content)
