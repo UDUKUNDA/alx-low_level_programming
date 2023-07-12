@@ -3,11 +3,12 @@
 #include <unistd.h>
 #include "main.h"
 #include <fcntl.h>
+
 /**
- * read_textfile - reads a text file and print it to POSIX
- * @filename: this the name of the file
- * @letters: the number of the letters it should print
- * return: a value
+ * read_textfile - reads a text file and outputs it
+ * @filename: para1
+ * @letters: para2
+ * Return: a value
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
