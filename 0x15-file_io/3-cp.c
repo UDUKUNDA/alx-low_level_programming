@@ -4,10 +4,10 @@
 #include <stdlib.h>
 #define BUFFSIZE 1024
 /**
- * main - iy copies a file to another
+ * main - it copies a file to another
  * @argc: argument count
  * @argv: a string of argument
- * Return: zero on success
+ * Return: zero
  */
 int main(int argc, char **argv)
 {
