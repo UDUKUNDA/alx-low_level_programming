@@ -4,9 +4,9 @@
 #include <unistd.h>
 #include <string.h>
 /**
- * append_text_to_file - appends a text to an existing one
- * @filename: This is the name of the file
- * @text_content: - the content of the file
+ * append_text_to_file - appends a text to an existing
+ * @filename: This is the param1
+ * @text_content: the param2
  * Return: a value
  */
 int append_text_to_file(const char *filename, char *text_content)
