@@ -4,9 +4,9 @@
 #include <stdlib.h>
 int powers(int length);
 /**
- * binary_to_uint - converts a binary to an unsigned iteger;
+ * binary_to_uint - converts a binary to an unsigned integer;
  * @b: a binary number string
- * Return: An unsigned integer value
+ * Return: an unsigned integer value
  */
 unsigned int binary_to_uint(const char *b)
 {
